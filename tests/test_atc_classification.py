@@ -13,6 +13,7 @@ def test_df_output():
     returns a pandas.DataFrame.
     """
     assert(isinstance(atc_classification('V08AC08'), DataFrame))
+    assert(atc_classification('V08AC08').isnull().sum() == 0)
 
 def test_wrong_type_input_error():
     """
